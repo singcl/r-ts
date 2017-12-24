@@ -2,7 +2,7 @@ let isDone: boolean = false;
 let decLiteral: number = 0o321;
 let namee: string = 'blob';
 let h: string = `hello`;
-let r: string = `mey name is ${name}`;
+let r: string = `mey name is ${namee}`;
 let listing: number[] = [1, 2, 3];
 let listingg: Array<number> = [1, 2, 3];
 let x: [string, number];
