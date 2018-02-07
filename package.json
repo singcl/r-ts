@@ -1,5 +1,5 @@
 {
-    "name": "r-ts",
+    "name": "@singcl/r-ts",
     "version": "0.0.1",
     "description": "ts l",
     "main": "index.js",
