@@ -13,3 +13,11 @@ enum Color {
 }
 let c: Color = Color.Blue;
 let no: any = 'eeeeee';
+
+// /* tslint:disable only-arrow-functions*/
+
+// 函数类型传统写法
+let myAdd: (x: number, y: number) => number = function(xx: number, y: number): number { return xx + y; };
+
+// 函数类型箭头函数写法
+let myAdd2: (x: number, y: number) => number = (xx: number, y: number): number => xx + y;
