@@ -3,8 +3,9 @@
 // （在JavaScript里发生这种情况的场合很多！）
 
 function extend<T, U>(first: T, second: U): T & U {
-    let result = <T & U>{};
+    const result = <T & U>{};
     for (let id in first) {
+        // (<T>result)[id] = (<T>first)[id]; 断言成T也可以
         (<any>result)[id] = (<any>first)[id];
     }
 
@@ -30,6 +31,9 @@ class ConsoleLogger implements Loggable {
     }
 }
 
+// 完整写法
+// var jim = extend<Person, ConsoleLogger>(new Person('Jim'), new ConsoleLogger());
+// 泛型-自动类型推断
 var jim = extend(new Person('Jim'), new ConsoleLogger());
 var n = jim.name;
 jim.log();
