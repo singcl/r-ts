@@ -3,9 +3,11 @@
 // 类比 C 中的共用体
 
 function padLeft(value: string, padding: string | number): string {
+    // typeof类型保护
     if (typeof padding === 'number') {
         return Array(padding + 1).join(' ') + value;
     }
+    // typeof类型保护
     if (typeof padding === 'string') {
         return padding + value;
     }
@@ -54,6 +56,7 @@ if (isFish(pet)) {
     pet.fly();
 }
 
+// typeof类型保护;
 function isNumber(x: any): x is number {
     return typeof x === 'number';
 }
@@ -70,4 +73,40 @@ function padLeft2(value: string, padding: string | number): string {
         return padding + value;
     }
     throw new Error(`Expected string or number, got '${padding}'.`);
+}
+
+// instanceof类型保护
+interface Padder {
+    getPaddingString(): string;
+}
+
+class SpaceRepeatingPadder implements Padder {
+    constructor(private numSpaces: number) {}
+    public getPaddingString() {
+        return Array(this.numSpaces + 1).join(' ');
+    }
+}
+
+class StringPadder implements Padder {
+    constructor(private value: string) {}
+    public getPaddingString() {
+        return this.value;
+    }
+}
+
+function getRandomPadder(): SpaceRepeatingPadder | StringPadder {
+    return Math.random() < 0.5
+        ? new SpaceRepeatingPadder(4)
+        : new StringPadder(' ');
+}
+
+// 类型为SpaceRepeatingPadder | StringPadder
+let padder: Padder = getRandomPadder();
+
+if (padder instanceof SpaceRepeatingPadder) {
+    padder; // 类型细化为'SpaceRepeatingPadder'
+}
+
+if (padder instanceof StringPadder) {
+    padder; // 类型细化为'StringPadder'
 }
