@@ -33,3 +33,23 @@ function getSmallPet(): Fish | Bird {
 let pet = getSmallPet();
 pet.layEggs(); // okay
 pet.swim(); // errors
+
+// 为了访问联合类型的非公共方法，我们要使用类型断言
+if ((<Fish>pet).swim) {
+    (<Fish>pet).swim();
+} else {
+    (<Bird>pet).fly();
+}
+
+// 用户自定义的类型保护
+// 我们只要简单地定义一个函数，它的返回值是一个 类型谓词：
+
+function isFish(pet: Fish | Bird): pet is Fish {
+    return (<Fish>pet).swim !== undefined;
+}
+
+if (isFish(pet)) {
+    pet.swim();
+} else {
+    pet.fly();
+}
