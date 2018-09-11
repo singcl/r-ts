@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        import * as circle from './circle.js';
+        import circle2 from './circle.js';
+        console.log('圆面积：' + circle.area(4));
+        console.log('圆周长：' + circle.circumference(14));
+        console.log('square：', circle.default(10));
+        console.log('square：', circle2(111));
+    </script>
+</body>
+
+</html>
