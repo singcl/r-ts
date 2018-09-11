@@ -11,3 +11,5 @@ strings.forEach((s) => {
         `"${s}" - ${validator.isAcceptable(s) ? 'matches' : 'does not match'}`
     );
 });
+
+import XClass from './XClass';
