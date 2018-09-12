@@ -25,7 +25,7 @@ export as namespace XClassLib;
 /*~ This declaration specifies that the class constructor function
  *~ is the exported object from the file
  */
-export default XClass;
+export = XClass;
 
 /*~ Write your module's methods and properties in this class */
 declare class XClass {

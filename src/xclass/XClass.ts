@@ -20,4 +20,7 @@ class XClass {
     }
 }
 
-export default XClass;
+// 使用export =  来支持commonjs 或者 AMD 工作流
+// 这样在ts 或者 js 文件中能够使用类型系统 智能提示类型系统等...
+// export default 不支持commonjs 或者 AMD 工作流
+export = XClass;
