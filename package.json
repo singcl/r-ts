@@ -1,6 +1,6 @@
 {
     "name": "@singcl/r-ts",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "description": "typescript leaninging...",
     "main": "dist/XClass.js",
     "typings": "dist/XClass.d.ts",

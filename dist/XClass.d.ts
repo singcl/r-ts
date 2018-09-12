@@ -9,4 +9,4 @@ declare class XClass {
     constructor(someParam?: string);
     myMethod(opts: XClass.XClassMethodOptions): number;
 }
-export default XClass;
+export = XClass;

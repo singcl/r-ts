@@ -8,7 +8,6 @@
     }
 })(function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     class XClass {
         constructor(someParam) { }
         myMethod(opts) {
@@ -21,5 +20,5 @@
             }
         }
     }
-    exports.default = XClass;
+    return XClass;
 });
