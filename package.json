@@ -29,7 +29,7 @@
     "tslint": "^5.8.0",
     "tslint-config-airbnb": "^5.4.2",
     "tslint-react": "^3.2.0",
-    "typescript": "^2.1.6"
+    "typescript": "^3.0.3"
   },
   "dependencies": {
     "babel-core": "^5.8.38"
