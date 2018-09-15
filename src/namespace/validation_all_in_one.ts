@@ -1,3 +1,4 @@
+// 所有的接口 类 对象 函数 变量 都是在全局环境
 interface StringValidator {
     isAcceptable(s: string): boolean;
 }
