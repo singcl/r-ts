@@ -24,20 +24,20 @@ namespace Validation {
 }
 
 // Some samples to try
-const strings3 = ['Hello', '98052', '101'];
+const stringList = ['Hello', '98052', '101'];
 // Validators to use
 
-const validators3: { [s: string]: Validation.StringValidator } = {};
-validators3['ZIP code'] = new Validation.ZipCodeValidator();
-validators3['Letters only'] = new Validation.LettersOnlyValidator();
+const theValidator: { [s: string]: Validation.StringValidator } = {};
+theValidator['ZIP code'] = new Validation.ZipCodeValidator();
+theValidator['Letters only'] = new Validation.LettersOnlyValidator();
 
 // Show whether each string passed each validator
-for (const s of strings3) {
-    for (const name in validators3) {
-        if (Object.prototype.hasOwnProperty.call(validators3, name)) {
+for (const s of stringList) {
+    for (const name in theValidator) {
+        if (Object.prototype.hasOwnProperty.call(theValidator, name)) {
             console.log(
                 `"${s}" - ${
-                    validators3[name].isAcceptable(s)
+                    theValidator[name].isAcceptable(s)
                         ? 'matches'
                         : 'does not match'
                 } ${name}`
