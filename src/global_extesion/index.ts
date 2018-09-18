@@ -8,6 +8,6 @@ declare global {
     }
 }
 
-Array.prototype.toObservable = function() {
-    //
+Array.prototype.toObservable = () => {
+    return new Observable();
 };
