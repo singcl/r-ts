@@ -35,6 +35,19 @@ class SubTest extends Test {
         this.cc = 44;
         this.x = 222222;
     }
+
+    meth() {
+        return 2;
+    }
 }
 
 console.log(new SubTest());
+
+// 类的方法默认是不可枚举的
+console.log(Object.getOwnPropertyDescriptor(SubTest.prototype, 'meth'));
+// { value: [Function: meth],
+//   writable: true,
+//   enumerable: false,
+//   configurable: true }
+
+console.log(Object.keys(SubTest.prototype));
