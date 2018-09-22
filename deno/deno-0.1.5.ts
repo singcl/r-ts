@@ -1,3 +1,5 @@
+// use deno deno-0.1.5.ts --allow-write
+
 import * as deno from 'deno';
 
 // Add deno.arch deno.platform #773
