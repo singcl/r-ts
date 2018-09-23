@@ -19,6 +19,7 @@ interface Greeter3 {
 }
 
 // 下面是一个重载构造函数的例子。
+// 同时 阅读https://www.tslang.cn/docs/release-notes/typescript-2.2.html#object-type 深入理解 混合构造函数类型 和 混合类
 function classDecorator<T extends { new (...args: any[]): {} }>(
     constructor: T
 ) {
