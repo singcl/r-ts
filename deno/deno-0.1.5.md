@@ -1,0 +1,9 @@
+-   Add atob() btoa() #776
+-   Add deno.arch deno.platform #773
+-   Add deno.symlink() and deno.symlinkSync() #742
+-   Add deno.mkdir() and deno.mkdirSync() #746
+-   Add deno.makeTempDir() #740
+-   Improvements to FileInfo interface #765, #761
+-   Add fetch.blob()
+-   Upgrade V8 to 7.0.276.15
+-   Upgrade Rust crates
