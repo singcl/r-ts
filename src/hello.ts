@@ -17,10 +17,18 @@ let no: any = 'eeeeee';
 // /* tslint:disable only-arrow-functions*/
 
 // 函数类型传统写法(函数类型完整写法)
-let myAdd: (x: number, y: number) => number = function(xx: number, y: number): number { return xx + y; };
+let myAdd: (x: number, y: number) => number = function(
+    xx: number,
+    y: number
+): number {
+    return xx + y;
+};
 
 // 函数类型箭头函数写法(函数类型完整写法)
-let myAdd2: (x: number, y: number) => number = (xx: number, y: number): number => xx + y;
+let myAdd2: (x: number, y: number) => number = (
+    xx: number,
+    y: number
+): number => xx + y;
 
 interface Xxx {
     (x: number): number;
@@ -35,7 +43,14 @@ interface SearchFuncs {
 }
 
 // https://www.tslang.cn/docs/handbook/functions.html
+// 函数类型声明可以这样写
+const caca = (a: string): number => +a;
 let cac: SearchFunc = (a: string, b: string): boolean => !!(a + b);
-let cacb: SearchFunc = (a, b) => !!(a + b);  // 这叫做“按上下文归类”，是类型推论的一种。 它帮助我们更好地为程序指定类型。
-let cacc: SearchFunc = function (a: string, b: string): boolean { return !!(a + b); };
-let cacx: (source: string, subString: string) => boolean = (a: string, b: string): boolean => !!(a + b);
+let cacb: SearchFunc = (a, b) => !!(a + b); // 这叫做“按上下文归类”，是类型推论的一种。 它帮助我们更好地为程序指定类型。
+let cacc: SearchFunc = function(a: string, b: string): boolean {
+    return !!(a + b);
+};
+let cacx: (source: string, subString: string) => boolean = (
+    a: string,
+    b: string
+): boolean => !!(a + b);
