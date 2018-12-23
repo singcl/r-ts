@@ -8,9 +8,10 @@
     }
 })(function (require, exports) {
     "use strict";
-    class XClass {
-        constructor(someParam) { }
-        myMethod(opts) {
+    var XClass = /** @class */ (function () {
+        function XClass(someParam) {
+        }
+        XClass.prototype.myMethod = function (opts) {
             if (typeof opts.height !== 'undefined' &&
                 typeof opts.width !== 'undefined') {
                 return opts.height * opts.height;
@@ -18,7 +19,8 @@
             else {
                 return 0;
             }
-        }
-    }
+        };
+        return XClass;
+    }());
     return XClass;
 });
